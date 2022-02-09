@@ -16,7 +16,8 @@ namespace Tekstiredaktor_Tsõbirev
     {
         OpenFileDialog OpenDlg = new OpenFileDialog();
         SaveFileDialog SaveDlg = new SaveFileDialog();
-        
+        private object listboxFrom;
+
         public Form1()
         {
             InitializeComponent();
@@ -144,6 +145,30 @@ namespace Tekstiredaktor_Tsõbirev
                     if (String.Contains(Find)) listBox3.Items.Add(String);
                 }
             }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form2 AddRec = new Form2();
+
+            AddRec.Owner = this;
+            AddRec.ShowDialog();
+
+
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            for(int i = listBox1.Items.Count - 1; i>=0;i--)
+            {
+                if (listBox1.GetSelected(i)) listBox1.Items.RemoveAt(i);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
