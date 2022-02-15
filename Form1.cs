@@ -17,6 +17,10 @@ namespace Tekstiredaktor_Tsõbirev
         OpenFileDialog OpenDlg = new OpenFileDialog();
         SaveFileDialog SaveDlg = new SaveFileDialog();
         private object listboxFrom;
+        private object ListBoxTo;
+        private object ListBoxFrom;
+
+        public bool True { get; private set; }
 
         public Form1()
         {
@@ -169,6 +173,22 @@ namespace Tekstiredaktor_Tsõbirev
         private void button3_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //ListBoxTo.Items.AddRange(listboxFrom.Items);
+            //ListBoxFrom.Items.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBox1.Sorted = True;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

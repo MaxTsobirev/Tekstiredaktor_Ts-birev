@@ -31,5 +31,10 @@ namespace Tekstiredaktor_Tsõbirev
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
